@@ -6,7 +6,7 @@ let buffer1;
 let texture1;
 
 // our 3D box which will use this texture
-let sphere;
+let box;
 
 function setup() {
 	// no main canvas - we will just use our off screen graphics buffers to hold our dynamic textures
@@ -28,7 +28,7 @@ function setup() {
 	// -- this function will run one time per frame when the user intersects with the entity
 	// -- think of it like a mini "draw" function that runs every time the user hovers over the plane
 	// -- with their mouse or VR controller
-	sphere = new sphere({
+	box = new Box({
 		x:0, y:3, z:-5,
 		width:3, height:3, depth:3,
 		asset: texture1,
@@ -49,7 +49,7 @@ function setup() {
 			buffer1.ellipse( intersectionInfo.point2d.x, intersectionInfo.point2d.y, 20, 20);
 		}
 	});
-	world.add(sphere);
+	world.add(box);
 
 	// a tiny 'clear' box - click on this box to erase the dynamic texture
 	let clearBox = new Box({
