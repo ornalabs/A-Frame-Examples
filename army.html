@@ -9,6 +9,7 @@
        <script src="js/aframe-environment-component.js"></script>
        <script src="https://cdn.jsdelivr.net/gh/diarmidmackenzie/instanced-mesh@v0.3-alpha/src/instanced-mesh.min.js"></script>
        <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+       <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
 
 </head>
 
@@ -18,16 +19,28 @@
 <a-scene environment="preset: yavapai;">
 	<a-assets>
 
-		<a-asset-item id="eligator" src="/assets/Aligator20Enemy-v2.glb"></a-asset-item>
+		<a-asset-item id="eligator" src="/assets/Aligator20Enemy-v2.glb"   response-type="arraybuffer" crossorigin="anonymous"> 
+
+        </a-asset-item>>
 	
 	</a-assets>
 	
-	<a-entity gltf-model="#eligator" 
+	<!-- <a-entity gltf-model="#eligator" 
 		position = "0 0 0"
 		rotation="0 0 0"
 		scale="0.1 0.1 0.1">
-	</a-entity>
+	</a-entity> -->
+    <a-entity id="mesh1"
+    gltf-model="#eligator"
+    scale="0.1 0.1 0.1"
+    instanced-mesh></a-entity>
 
+<a-entity id ="helmet0" position = "-4 4 -6" rotation="0 10 0" scale="2 2 2" instanced-mesh-member="mesh:#mesh1"></a-entity>
+<a-entity id ="helmet1" position = "-2 -2 -8" rotation="0 20 0" scale="3 3 3" instanced-mesh-member="mesh:#mesh1"></a-entity>
+<a-entity id ="helmet2" position = "1 4 -6" rotation="0 30 0" scale="1.5 1.5 1.5" instanced-mesh-member="mesh:#mesh1"></a-entity>
+<a-entity id ="helmet3" position = "3 0 -6" rotation="0 50 0" scale="1 1 1" instanced-mesh-member="mesh:#mesh1" ></a-entity>
+<a-entity id ="helmet4" position = "4 2 -6" rotation="0 -20 0" scale="0.5 0.5 0.5" instanced-mesh-member="mesh:#mesh1"></a-entity>
+<a-entity id ="helmet5" position = "5 1 -6" rotation="0 -90 0" scale="0.2 0.2 0.2" instanced-mesh-member="mesh:#mesh1"></a-entity>
 
 
   <a-entity camera look-controls wasd-controls="acceleration: 50" position="0 0 7" rotation="-38 0 0">
