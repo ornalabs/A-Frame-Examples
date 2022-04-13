@@ -34,13 +34,13 @@ function setup() {
 		}));
 	}
 
-	eli = new GLTF({
-		asset: 'eli',
-		x: 2,
-		y: 1,
-		z: -5
-	});
-	world.add(eli);
+	// eli = new GLTF({
+	// 	asset: 'eli',
+	// 	x: 2,
+	// 	y: 1,
+	// 	z: -5
+	// });
+	// world.add(eli);
 }
 
 let t = "";
