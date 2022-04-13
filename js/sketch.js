@@ -33,7 +33,10 @@ function setup() {
 			red:random(255), green: random(255), blue: random(255)
 		}));
 	}
-
+	let sky = new Sky({
+		asset: 'sky1'
+	});
+	world.add(sky);
 	// eli = new GLTF({
 	// 	asset: 'eli',
 	// 	x: 2,
