@@ -13,7 +13,7 @@ function setup() {
 	// text output to show the current state of the controllers
 	output = new Text({
 		x:0, y:5, z: -5,
-		text: "Hello, world",
+		text: "MARSX",
 		red:0, blue:0, green:0,
 		scaleX:15,scaleZ:15,scaleY:15
 	});
@@ -33,12 +33,20 @@ function setup() {
 			red:random(255), green: random(255), blue: random(255)
 		}));
 	}
+
+	eli = new GLTF({
+		asset: 'eli',
+		x: 2,
+		y: 1,
+		z: -5
+	});
+	world.add(eli);
 }
 
 let t = "";
 
 function draw() {
-
+	eli.spinY(-1);
 	// when in immersive VR mode in a VR headset these methoes will return true or false based on
 	// the current state of the controller - we are just dropping their return values into the text
 	// unit for debugging purposes here. All of these methods return a boolean value.
