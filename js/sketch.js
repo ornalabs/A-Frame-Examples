@@ -73,11 +73,7 @@ function setup() {
 	world.add(clearBox);
 
 	
-	//ADDing skies
-let sky = new Sky({
-		asset: 'sky1'
-	});
-	world.add(sky);
+
 	
 	// text output to show the current state of the controllers
 	output = new Text({
@@ -88,12 +84,7 @@ let sky = new Sky({
 	});
 	world.add(output);
 
-	// floor so we don't feel like we're floating in space
-	world.add(new Plane({
-		width: 100, height: 100,
-		red:255, green:128, blue:0,
-		rotationX: -90
-	}));
+
 
 	
 	
@@ -143,10 +134,19 @@ function draw() {
 	output.setText(t);
 }
 
-
+	// // floor so we don't feel like we're floating in space
+	// world.add(new Plane({
+	// 	width: 100, height: 100,
+	// 	red:255, green:128, blue:0,
+	// 	rotationX: -90
+	// }));
 
 //HELPFUL APIS
-
+	//ADDing skies
+// let sky = new Sky({
+// 		asset: 'sky1'
+// 	});
+// 	world.add(sky);
 
 //ADDing skies
 // let sky = new Sky({
