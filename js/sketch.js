@@ -46,7 +46,9 @@ function setup() {
 let t = "";
 
 function draw() {
-	eli.spinY(-1);
+	// dont spin eli 3d model
+	// eli.spinY(-1);
+	
 	// when in immersive VR mode in a VR headset these methoes will return true or false based on
 	// the current state of the controller - we are just dropping their return values into the text
 	// unit for debugging purposes here. All of these methods return a boolean value.
