@@ -73,7 +73,11 @@ function setup() {
 	world.add(clearBox);
 
 	
-	
+	//ADDing skies
+let sky = new Sky({
+		asset: 'sky1'
+	});
+	world.add(sky);
 	
 	// text output to show the current state of the controllers
 	output = new Text({
@@ -100,7 +104,7 @@ let t = "";
 
 function draw() {
 	
-	
+	box.spinX(0.5);
 	// when in immersive VR mode in a VR headset these methoes will return true or false based on
 	// the current state of the controller - we are just dropping their return values into the text
 	// unit for debugging purposes here. All of these methods return a boolean value.
